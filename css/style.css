@@ -1,0 +1,86 @@
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+}
+.header__nav__links {
+  position: absolute;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: black;
+  padding: 1rem 0;
+}
+.header__nav__links a {
+  color: white;
+  margin: auto;
+  padding: 0.5rem 0 0 0;
+}
+.header__nav__links a:hover {
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    padding: 0.5rem 1rem;
+  }
+  .header__nav__btn {
+    display: none;
+  }
+  .header__nav__links {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+  .header__nav__links a {
+    color: white;
+    margin: auto;
+    padding-left: 1rem;
+  }
+  .header__nav__links a:hover {
+    background-color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,67 @@
+@use 'reset';
+
+.header{
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    &__logo{
+
+    }
+    &__btn{
+
+    }
+    &__links{
+      position: absolute;
+      top:84px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: black;
+      padding: 1rem 0;
+      & a{
+        color:white;
+        margin: auto;
+        padding: .5rem 0 0 0;
+        &:hover{
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header{
+    &__nav{
+      padding: .5rem 1rem;
+      &__btn{
+        display:none;
+      }
+      &__links{
+        position: relative;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        & a{
+          color:white;
+          margin: auto;
+          padding-left: 1rem;
+          &:hover{
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
