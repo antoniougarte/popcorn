@@ -1,8 +1,10 @@
 body {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  background-color: #212529;
 }
 
 html {
@@ -34,33 +36,66 @@ img {
 }
 
 .header__nav {
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: orange;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.header__nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header__nav__links {
   position: absolute;
-  top: 84px;
+  top: 98px;
+  left: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: black;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  visibility: hidden;
+  z-index: 999;
 }
 .header__nav__links a {
-  color: white;
-  margin: auto;
-  padding: 0.5rem 0 0 0;
+  color: #e3f2fd;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  text-shadow: 20px 15px 7px red;
 }
-.header__nav__links a:hover {
-  background-color: red;
+.header__slider .swiper {
+  width: 100%;
+  height: 700px;
+  min-height: 300px;
+}
+.header__slider .swiper-slide img {
+  min-height: 700px;
+  object-fit: cover;
+}
+.header__slider .swiper-button-prev, .header__slider .swiper-button-next {
+  color: #adabab;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #adabab;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+  background-color: #e3f2fd !important;
+}
+
+.active {
+  visibility: visible;
 }
 
 @media (min-width: 768px) {
-  .header__nav {
-    padding: 0.5rem 1rem;
-  }
   .header__nav__btn {
     display: none;
   }
@@ -72,14 +107,21 @@ img {
     width: auto;
     background-color: transparent;
     padding: 0;
+    visibility: visible;
   }
-  .header__nav__links a {
-    color: white;
-    margin: auto;
-    padding-left: 1rem;
+}
+@media (min-width: 992px) {
+  .header__slider .swiper {
+    width: 100%;
+    height: 100vh;
+    min-height: 300px;
   }
-  .header__nav__links a:hover {
-    background-color: red;
+  .header__slider .swiper-slide img {
+    min-height: 700px;
+    object-fit: cover;
+  }
+  .header__slider .swiper-button-prev, .header__slider .swiper-button-next {
+    color: #adabab;
   }
 }
 

@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
   <title>PopCorn Cine</title>
@@ -11,25 +15,53 @@
 <body>
   <header class="header">
     <div class="header__nav">
-      <div class="header__nav__logo">
-        <a href="#"><img width="100px" src="https://i.postimg.cc/FzLSRXvD/logo-cine-png.png" alt="Imagen de logo"></a>
+      <div class="container">
+        <div class="header__nav__logo">
+          <a href="#"><img width="100px" src="https://i.postimg.cc/ydbP7ZtC/popcorn-blanco.png" alt="Imagen de logo"></a>
+        </div>
+        <div class="header__nav__btn">
+          <button id="btnMenu" class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <nav id="menu" class="header__nav__links">
+          <a class="link" href="#">HOME</a>
+          <a class="link" href="#">ABOUT</a>
+          <a class="link" href="#">MOVIES</a>
+        </nav>
       </div>
-      <div class="header__nav__btn">
-        <button class="hamburger hamburger--collapse" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
-      <nav class="header__nav__links">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">MOVIES</a>
-      </nav>
     </div>
     <div class="header__slider">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          
+          <div class="swiper-slide">
+            <img width="100%" src="https://i.postimg.cc/90jqq5SQ/spiderman-wallpaper.jpg" alt="Primer Slide">
+          </div>
+          <div class="swiper-slide">
+            <img width="100%" src="https://i.postimg.cc/CMr4G6GN/blackadam.jpg" alt="Segundo Slide">
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </div>
   </header>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>
