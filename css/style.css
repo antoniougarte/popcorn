@@ -139,7 +139,8 @@ img {
   justify-content: center;
   gap: 1rem;
 }
-.main__pag .btnPag {
+
+.btnPag {
   padding: 1rem 3rem;
   background-color: #0093a9;
   border-radius: 15px;
@@ -148,6 +149,27 @@ img {
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.about {
+  color: #e3f2fd;
+}
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.about__grid__text h1 {
+  padding-bottom: 1rem;
+}
+
+.footer {
+  background-color: #0093a9;
+  border-top: black solid 3px;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -177,6 +199,12 @@ img {
   }
   .header__slider .swiper-button-prev, .header__slider .swiper-button-next {
     color: #adabab;
+  }
+}
+@media (min-width: 1200px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
 

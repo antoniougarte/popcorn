@@ -10,10 +10,11 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="https://i.postimg.cc/KjbSFjWf/popcorn-negro.png" type="image/x-icon">
   <title>PopCorn Cine</title>
 </head>
 <body>
-  <header class="header">
+  <header id="home"class="header">
     <div class="header__nav">
       <div class="container">
         <div class="header__nav__logo">
@@ -27,9 +28,9 @@
           </button>
         </div>
         <nav id="menu" class="header__nav__links">
-          <a class="link" href="#">HOME</a>
-          <a class="link" href="#">ABOUT</a>
-          <a class="link" href="#">MOVIES</a>
+          <a class="link" href="#home">HOME</a>
+          <a class="link" href="#about">ABOUT</a>
+          <a class="link" href="#movies">MOVIES</a>
         </nav>
       </div>
     </div>
@@ -59,10 +60,27 @@
       </div>
     </div>
   </header>
-  <main class="main mt-5">
+  <section id="about"class="about mt-5">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__grid__text">
+          <h1>About PopCorn</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime consequatur assumenda aliquam cum, laborum doloribus iusto, placeat officiis nostrum reprehenderit quidem autem eligendi ex, molestiae consequuntur optio? Ea, non quisquam.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nobis consectetur voluptates ex facilis ducimus aspernatur, vero vitae quaerat exercitationem iure velit provident voluptatem nemo blanditiis? Tenetur recusandae quos ad!</p>
+          <br>
+          <a class="btnPag" href="#movies">See more</a>
+        </div>
+        <div class="about__grid__img">
+          <img src="https://i.postimg.cc/L8tr9Rp8/captura.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  <main id="movies" class="main mt-5">
     <div class="container">
       <div class="main__title">
-        <h1>Discover the most popular movies</h1>
+        <h2>Discover the most popular movies</h2>
       </div>
       <div id="mainCards" class="main__cards">
         
@@ -73,7 +91,11 @@
       </div>
     </div>
   </main>
-
+  <footer class="footer">
+    <div class="container">
+      <p>All rights reserved. Powered by Antonio Ugarte</p>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/index.js" type="module"></script>
 </body>
