@@ -2,7 +2,7 @@
 
 .header{
   &__nav{
-    padding-top: 1rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,13 @@
         padding: 1rem 1rem;
         font-weight: bold;
         text-shadow: 20px 15px 7px red;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
         &:hover{
+          background-size: 100% 2px;
         }
       }
     }
@@ -64,6 +70,56 @@
 .active{
   visibility: visible;
 }
+
+
+.main{
+  text-align: center;
+  &__title{
+    color: #e3f2fd
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding-top: 4rem;
+    &__card{
+      background-color: #e3f2fd;
+      margin: auto;
+      width: 250px;
+      height: 480px;
+      padding: .2rem;
+      border-radius: 10px;
+      &:hover{
+        cursor: pointer;
+        & h4{
+          color:#0093a9;
+        }
+      }
+      & span{
+        font-weight: bold;
+      }
+    }
+  }
+  &__pag{
+    padding: 2rem 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    & .btnPag{
+      padding: 1rem 3rem;
+      background-color: #0093a9;
+      border-radius: 15px;
+      border: transparent;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+
 @media (min-width: 768px) {
   .header{
     &__nav{
@@ -93,7 +149,7 @@
         }
         & .swiper-slide{
           & img{
-            min-height: 700px;
+            height: 100vh;
             object-fit: cover;
           }
         }

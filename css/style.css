@@ -36,7 +36,7 @@ img {
 }
 
 .header__nav {
-  padding-top: 1rem;
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,6 +69,14 @@ img {
   padding: 1rem 1rem;
   font-weight: bold;
   text-shadow: 20px 15px 7px red;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+.header__nav__links a:hover {
+  background-size: 100% 2px;
 }
 .header__slider .swiper {
   width: 100%;
@@ -95,6 +103,53 @@ img {
   visibility: visible;
 }
 
+.main {
+  text-align: center;
+}
+.main__title {
+  color: #e3f2fd;
+}
+.main__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding-top: 4rem;
+}
+.main__cards__card {
+  background-color: #e3f2fd;
+  margin: auto;
+  width: 250px;
+  height: 480px;
+  padding: 0.2rem;
+  border-radius: 10px;
+}
+.main__cards__card:hover {
+  cursor: pointer;
+}
+.main__cards__card:hover h4 {
+  color: #0093a9;
+}
+.main__cards__card span {
+  font-weight: bold;
+}
+.main__pag {
+  padding: 2rem 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.main__pag .btnPag {
+  padding: 1rem 3rem;
+  background-color: #0093a9;
+  border-radius: 15px;
+  border: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .header__nav__btn {
     display: none;
@@ -117,7 +172,7 @@ img {
     min-height: 300px;
   }
   .header__slider .swiper-slide img {
-    min-height: 700px;
+    height: 100vh;
     object-fit: cover;
   }
   .header__slider .swiper-button-prev, .header__slider .swiper-button-next {
