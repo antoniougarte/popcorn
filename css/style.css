@@ -162,6 +162,9 @@ img {
 .about__grid__text h1 {
   padding-bottom: 1rem;
 }
+.about__grid__img {
+  padding-top: 1rem;
+}
 
 .footer {
   background-color: #0093a9;
