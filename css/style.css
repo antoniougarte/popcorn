@@ -6,6 +6,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #212529;
 }
+body.dark {
+  background-color: #eaeaea;
+}
 
 html {
   box-sizing: border-box;
@@ -46,6 +49,9 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
+body.dark .header__nav {
+  background-color: #0093a9;
+}
 .header__nav .container {
   display: flex;
   justify-content: space-between;
@@ -53,15 +59,18 @@ img {
 }
 .header__nav__links {
   position: absolute;
-  top: 98px;
+  top: 115px;
   left: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 0.5rem 0;
   visibility: hidden;
   z-index: 999;
+}
+body.dark .header__nav__links {
+  background-color: #0093a9;
 }
 .header__nav__links a {
   color: #e3f2fd;
@@ -75,8 +84,47 @@ img {
   background-size: 0% 2px;
   transition: background-size 0.3s;
 }
+body.dark .header__nav__links a {
+  text-shadow: 20px 15px 7px black;
+}
 .header__nav__links a:hover {
   background-size: 100% 2px;
+}
+.header__nav__links .btn-dark {
+  background-color: rgb(238, 191, 103);
+  border-radius: 1000px;
+  border: none;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.header__nav__links .btn-dark::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 0px;
+  left: 0px;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease right;
+  transition: 0.3s ease left;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+}
+.header__nav__links .btn-dark.in {
+  background-color: #e3f2fd;
+  color: white;
+}
+.header__nav__links .btn-dark.in::after {
+  right: 0;
+  left: unset;
+}
+.header__nav__links .btn-dark span {
+  display: block;
 }
 .header__slider .swiper {
   width: 100%;
@@ -109,6 +157,9 @@ img {
 .main__title {
   color: #e3f2fd;
 }
+body.dark .main__title {
+  color: #212529;
+}
 .main__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -122,6 +173,10 @@ img {
   height: 480px;
   padding: 0.2rem;
   border-radius: 10px;
+}
+body.dark .main__cards__card {
+  background-color: #212529;
+  color: #e3f2fd;
 }
 .main__cards__card:hover {
   cursor: pointer;
@@ -154,6 +209,9 @@ img {
 .about {
   color: #e3f2fd;
 }
+body.dark .about {
+  color: #212529;
+}
 .about__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -168,7 +226,7 @@ img {
 
 .footer {
   background-color: #0093a9;
-  border-top: black solid 3px;
+  border-top: black solid 2px;
   color: white;
   padding: 1rem 0;
   text-align: center;
@@ -188,6 +246,9 @@ img {
     background-color: transparent;
     padding: 0;
     visibility: visible;
+  }
+  .btn-dark {
+    margin-left: 2rem !important;
   }
 }
 @media (min-width: 992px) {

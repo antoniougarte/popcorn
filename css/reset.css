@@ -6,6 +6,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #212529;
 }
+body.dark {
+  background-color: #eaeaea;
+}
 
 html {
   box-sizing: border-box;
